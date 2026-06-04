@@ -1,6 +1,7 @@
 # Жизненный цикл заказа — Sequence Diagram
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'fontSize':'14px','actorBkg':'#dae8fc','actorBorder':'#5b7fb0','actorTextColor':'#0b2545','actorLineColor':'#5b7fb0','signalColor':'#1f2d3d','signalTextColor':'#0b2545','labelBoxBkgColor':'#dae8fc','labelBoxBorderColor':'#5b7fb0','labelTextColor':'#0b2545','loopTextColor':'#0b2545','noteBkgColor':'#fff2cc','noteBorderColor':'#d6b656','noteTextColor':'#0b2545','sequenceNumberColor':'#ffffff','activationBkgColor':'#e2e8f0','activationBorderColor':'#7a8aa0'}}}%%
 sequenceDiagram
     autonumber
 
