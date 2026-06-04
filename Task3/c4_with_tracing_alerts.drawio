@@ -89,14 +89,8 @@
                 <mxCell id="r7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="mesui" target="mesapi" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="r16" value="publishes order.submitted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=none;" parent="1" source="shopapi" target="rabbit" edge="1">
-                    <mxGeometry x="-0.2778" y="20" relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1080" y="480"/>
-                            <mxPoint x="1560" y="480"/>
-                        </Array>
-                        <mxPoint as="offset"/>
-                    </mxGeometry>
+                <mxCell id="r16" value="publishes order.submitted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=none;" parent="1" source="crmapi" target="rabbit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <object placeholders="1" c4Name="Store System" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="boundary">
                     <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;dashPattern=8 4;metaEdit=1;rotatable=1;absoluteArcSize=1;spacing=10;movable=1;resizable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
@@ -195,13 +189,8 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="t4" value="traceparent in headers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=10;dashed=1;endArrow=none;startArrow=none;strokeWidth=2;" parent="1" source="shopapi" target="rabbit" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="960" y="210"/>
-                            <mxPoint x="1650" y="210"/>
-                        </Array>
-                    </mxGeometry>
+                <mxCell id="t4" value="traceparent in headers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=10;dashed=1;endArrow=none;startArrow=none;strokeWidth=2;" parent="1" source="crmapi" target="rabbit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="t5" value="OTLP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="otelcol" target="jaeger" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
