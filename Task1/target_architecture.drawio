@@ -158,6 +158,9 @@
                 <mxCell id="26" value="* каждый сервис: 2+ инстанса за Application Load Balancer (ALB) | CI/CD: автодеплой в release после зелёных тестов, ручное approve для prod" style="text;html=1;align=left;verticalAlign=middle;resizable=0;strokeColor=none;fillColor=none;fontStyle=2;fontSize=10;" parent="1" vertex="1">
                     <mxGeometry x="50" y="961" width="950" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="legend" value="&lt;b&gt;Легенда&lt;/b&gt;&lt;br&gt;&lt;b&gt;Цвет — по типу компонента:&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#6c8ebf&quot;&gt;■&lt;/font&gt; синий — API-сервисы (Java / C#);&lt;br&gt;&lt;font color=&quot;#82b366&quot;&gt;■&lt;/font&gt; зелёный — фронтенды и пользователи;&lt;br&gt;&lt;font color=&quot;#d6b656&quot;&gt;■&lt;/font&gt; жёлтый/оранжевый — инфраструктура потоков (API Gateway, RabbitMQ, Price Calculator Worker);&lt;br&gt;&lt;font color=&quot;#b85450&quot;&gt;■&lt;/font&gt; красный — базы данных (новые БД и read-реплики);&lt;br&gt;&lt;font color=&quot;#666666&quot;&gt;■&lt;/font&gt; серый — объектное хранилище (S3);&lt;br&gt;&lt;font color=&quot;#9673a6&quot;&gt;■&lt;/font&gt; фиолетовый — слой наблюдаемости.&lt;br&gt;&lt;br&gt;&lt;b&gt;Новое относительно текущей архитектуры:&lt;/b&gt; API Gateway (rate limit/quota/auth), Price Calculator Worker (async-расчёт цены), выделенная CRM DB, read-реплики Shop/MES DB, Observability Layer (OTel SDK · Jaeger · Prometheus · Grafana), DLQ + retry в RabbitMQ, 2+ инстанса каждого сервиса за ALB." style="text;html=1;align=left;verticalAlign=top;fillColor=#f9f9f9;strokeColor=#999999;fontColor=#333333;fontSize=11;spacing=8;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="1010" y="220" width="400" height="380" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>

@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="C4-with-tracing-alerts" id="c4tracingalerts">
-        <mxGraphModel dx="1051" dy="901" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2700" pageHeight="1720" math="0" shadow="0">
+        <mxGraphModel dx="1461" dy="1094" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2700" pageHeight="1720" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -65,7 +65,7 @@
                 <mxCell id="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="crmapi" target="shopdb" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1420" y="610"/>
+                            <mxPoint x="1420" y="580"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -75,25 +75,17 @@
                 <mxCell id="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="shopui" target="shopapi" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=classic;startFill=1;" parent="1" source="crmapi" target="rabbit" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="1420" y="610"/>
-                            <mxPoint x="1420" y="700"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="r6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=classic;startFill=1;" parent="1" source="mesapi" target="rabbit" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="r7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="mesui" target="mesapi" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="r16" value="publishes order.submitted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=none;" parent="1" source="shopapi" target="rabbit" edge="1">
-                    <mxGeometry x="-0.2778" y="20" relative="1" as="geometry">
+                <mxCell id="r16" value="publishes order.submitted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;startArrow=none;" parent="1" source="crmapi" target="rabbit" edge="1">
+                    <mxGeometry x="-0.4167" y="10" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1080" y="480"/>
-                            <mxPoint x="1560" y="480"/>
+                            <mxPoint x="1410" y="610"/>
+                            <mxPoint x="1410" y="700"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -114,17 +106,21 @@
                 </mxCell>
                 <object placeholders="1" c4Name="3d files storage" c4Type="Container" c4Technology="S3-based storage" c4Description="Stores 3d files" label="&lt;b&gt;&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 16px&quot;&gt;%c4Name%&lt;/font&gt;&lt;/b&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="s3">
                     <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;" parent="1" vertex="1">
-                        <mxGeometry x="900" y="780" width="240" height="120" as="geometry"/>
+                        <mxGeometry x="1020" y="780" width="240" height="120" as="geometry"/>
                     </mxCell>
                 </object>
                 <mxCell id="r12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="mesapi" target="s3" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1150" y="950"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="r13" value="uploads files" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=10;" parent="1" source="shopapi" target="s3" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1020" y="510"/>
-                            <mxPoint x="1020" y="510"/>
+                            <mxPoint x="1040" y="700"/>
+                            <mxPoint x="1040" y="700"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -144,7 +140,7 @@
                 <mxCell id="r15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;" parent="1" source="mesapi" target="mesdb" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1280" y="950"/>
+                            <mxPoint x="1280" y="970"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -184,27 +180,32 @@
                 <mxCell id="t2" value="OTLP/gRPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="crmapi" target="otelcol" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1950" y="590"/>
+                            <mxPoint x="1210" y="440"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="t3" value="OTLP/gRPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="mesapi" target="otelcol" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1950" y="970"/>
+                            <mxPoint x="820" y="920"/>
+                            <mxPoint x="820" y="420"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="t4" value="traceparent in headers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=10;dashed=1;endArrow=none;startArrow=none;strokeWidth=2;" parent="1" source="shopapi" target="rabbit" edge="1">
-                    <mxGeometry relative="1" as="geometry">
+                <mxCell id="t4" value="traceparent in headers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=10;dashed=1;endArrow=none;startArrow=none;strokeWidth=2;" parent="1" source="crmapi" target="rabbit" edge="1">
+                    <mxGeometry x="0.2174" y="-10" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="960" y="210"/>
-                            <mxPoint x="1650" y="210"/>
+                            <mxPoint x="1370" y="630"/>
+                            <mxPoint x="1370" y="730"/>
                         </Array>
+                        <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="t5" value="OTLP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="otelcol" target="jaeger" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="t5" value="OTLP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1980" y="460" as="sourcePoint"/>
+                        <mxPoint x="1980" y="520" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="t7" value="OIDC auth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="jaeger" target="sso" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -319,7 +320,7 @@
                 <mxCell id="legend2" value="&lt;b&gt;Легенда&lt;/b&gt;&lt;br&gt;&lt;b&gt;Цвета блоков:&lt;/b&gt; ■ синие — существующие контейнеры системы; ■ красные — компоненты трейсинга; ■ зелёные — автоматический мониторинг прохождения заказа и алертинг (доп. задание).&lt;br&gt;&lt;b&gt;Линии:&lt;/b&gt; сплошная стрелка — вызов / поток данных; красный пунктир — пропагация trace-контекста (traceparent); пунктирные рамки — границы систем.&lt;br&gt;&lt;b&gt;Поток алертинга:&lt;/b&gt; span_metrics из трейсов → Prometheus (RED, «закрытая операция отработала плохо»); отдельный probe-job читает БД и экспортирует gauge&#39;и stuck-orders («операция висит»). Prometheus → AlertManager → каналы (Telegram / Email / PagerDuty). AlertManager и Grafana переиспользуются ." style="text;html=1;align=left;verticalAlign=middle;fillColor=#f9f9f9;strokeColor=#999999;fontColor=#333333;fontSize=11;spacing=8;" parent="1" vertex="1">
                     <mxGeometry x="500" y="1420" width="2140" height="110" as="geometry"/>
                 </mxCell>
-                <mxCell id="legend3" value="&lt;b&gt;order-state-prober — зачем нужен:&lt;/b&gt; трейсинг и span-метрики видят только ЗАКРЫВШИЕСЯ операции (span завершился). Если заказ завис навсегда — например, потерялось сообщение в RabbitMQ (P1) — span не закроется, и трейсинг такой случай не заметит.&#xa;Поэтому prober раз в 30с читает Shop DB и MES DB, по каждому активному заказу (статус ≠ CLOSED) считает now − status_changed_at и экспортирует в Prometheus два gauge: orders_in_status{status} (сколько заказов в статусе) и order_stuck_in_status_seconds_max{status} (макс. время «зависания»).&#xa;На этих метриках строятся алерты «заказ застрял в статусе» (§7.4 №2 — PRICE_CALCULATED &gt; 30 мин; №3 — SUBMITTED &gt; 5 мин). Это black-box / synthetic-мониторинг состояния, дополняющий трейсинг." style="text;html=1;align=left;verticalAlign=middle;fillColor=#f5fff5;strokeColor=#82b366;fontColor=#436b2f;fontSize=11;spacing=8;" vertex="1" parent="1">
+                <mxCell id="legend3" value="&lt;b&gt;order-state-prober:&lt;/b&gt; трейсинг и span-метрики видят только ЗАКРЫВШИЕСЯ операции (span завершился). Если заказ завис навсегда — например, потерялось сообщение в RabbitMQ (P1) — span не закроется, и трейсинг такой случай не заметит.&lt;br&gt;Поэтому prober раз в 30с читает Shop DB и MES DB, по каждому активному заказу (статус ≠ CLOSED) считает now − status_changed_at и экспортирует в Prometheus два gauge: orders_in_status{status} (сколько заказов в статусе) и order_stuck_in_status_seconds_max{status} (макс. время «зависания»).&lt;br&gt;На этих метриках строятся алерты «заказ застрял в статусе» (§7.4 №2 — PRICE_CALCULATED &amp;gt; 30 мин; №3 — SUBMITTED &amp;gt; 5 мин). Это black-box / synthetic-мониторинг состояния, дополняющий трейсинг." style="text;html=1;align=left;verticalAlign=middle;fillColor=#f5fff5;strokeColor=#82b366;fontColor=#436b2f;fontSize=11;spacing=8;" parent="1" vertex="1">
                     <mxGeometry x="500" y="1550" width="2140" height="130" as="geometry"/>
                 </mxCell>
             </root>

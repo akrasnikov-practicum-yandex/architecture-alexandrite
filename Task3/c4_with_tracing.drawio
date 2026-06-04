@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="C4-with-tracing" id="c4tracing">
-        <mxGraphModel dx="1051" dy="2301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2700" pageHeight="1400" math="0" shadow="0">
+        <mxGraphModel dx="1137" dy="2251" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2700" pageHeight="1400" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -37,7 +37,7 @@
                         <mxGeometry x="70" y="1030" width="200" height="180" as="geometry"/>
                     </mxCell>
                 </object>
-                <object placeholders="1" c4Name="Customer" c4Type="Person" c4Description="Buys jewelry online" label="&lt;b&gt;&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 16px&quot;&gt;%c4Name%&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;[%c4Type%]&lt;/font&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="customer">
+                <object placeholders="1" c4Name="Customer" c4Type="Person" c4Description="Buys online" label="&lt;b&gt;&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 16px&quot;&gt;%c4Name%&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;font color=&quot;#ffffff&quot;&gt;[%c4Type%]&lt;/font&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#cccccc&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="customer">
                     <mxCell style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#6C6477;strokeColor=#4D4D4D;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=0;" parent="1" vertex="1">
                         <mxGeometry x="80" y="250" width="200" height="180" as="geometry"/>
                     </mxCell>
@@ -70,7 +70,7 @@
                 <mxCell id="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="crmapi" target="shopdb" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1460" y="610"/>
+                            <mxPoint x="1500" y="570"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -87,7 +87,7 @@
                 <mxCell id="r5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" parent="1" source="crmapi" target="rabbit" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1460" y="610"/>
+                            <mxPoint x="1580" y="600"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
@@ -97,17 +97,17 @@
                 <mxCell id="r7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mesui" target="mesapi" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="r16" value="publishes order.submitted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;startArrow=none;" edge="1" parent="1" source="shopapi" target="rabbit">
-                    <mxGeometry x="0.0256" y="70" relative="1" as="geometry">
+                <mxCell id="r16" value="publishes order.submitted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;startArrow=none;" parent="1" source="crmapi" target="rabbit" edge="1">
+                    <mxGeometry x="-0.5238" y="-40" relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1530" y="350"/>
+                            <mxPoint x="1470" y="650"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
                 <object placeholders="1" c4Name="Store System" c4Type="SystemScopeBoundary" c4Application="Software System" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="boundary">
                     <mxCell style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=left;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;" parent="1" vertex="1">
-                        <mxGeometry x="500" y="-40" width="1220" height="1340" as="geometry"/>
+                        <mxGeometry x="500" y="-20" width="1220" height="1320" as="geometry"/>
                     </mxCell>
                 </object>
                 <mxCell id="r8" value="requests price calc (public API)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="apiuser" target="mesapi" edge="1">
@@ -167,7 +167,7 @@
                     </mxCell>
                 </object>
                 <object placeholders="1" c4Name="Prometheus" c4Type="Container (reused)" c4Technology="Prometheus TSDB" c4Description="Принимает span_metrics (RED) из OTel Collector. Переиспользуется из стека мониторинга " label="&lt;b&gt;&lt;font color=&quot;#ffffff&quot; style=&quot;font-size: 16px&quot;&gt;%c4Name%&lt;/font&gt;&lt;/b&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;font color=&quot;#eeffee&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="prom">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#82b366;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#436b2f;metaEdit=1;resizable=0;" vertex="1" parent="1">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#8C8C8C;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#5C5C5C;metaEdit=1;resizable=0;" parent="1" vertex="1">
                         <mxGeometry x="2370" y="270" width="320" height="140" as="geometry"/>
                     </mxCell>
                 </object>
@@ -190,24 +190,28 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="t2" value="OTLP/gRPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;" edge="1" parent="1" source="crmapi" target="otelcol">
+                <mxCell id="t2" value="OTLP/gRPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="crmapi" target="otelcol" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="1810" y="630"/>
+                            <mxPoint x="1810" y="580"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="t3" value="OTLP/gRPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;" edge="1" parent="1" source="mesapi" target="otelcol">
+                <mxCell id="t3" value="OTLP/gRPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;dashed=0;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="mesapi" target="otelcol" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1850" y="970"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="t4" value="traceparent in headers (W3C)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=10;dashed=1;endArrow=none;startArrow=none;strokeWidth=2;" parent="1" source="shopapi" target="rabbit" edge="1">
-                    <mxGeometry x="-0.4074" y="-10" relative="1" as="geometry">
+                <mxCell id="t4" value="traceparent in headers (W3C)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=10;dashed=1;endArrow=none;startArrow=none;strokeWidth=2;exitX=1.005;exitY=0.618;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="crmapi" edge="1">
+                    <mxGeometry x="0.0545" y="14" relative="1" as="geometry">
+                        <mxPoint x="1360" y="610" as="sourcePoint"/>
+                        <mxPoint x="1554" y="750" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="1590" y="380"/>
+                            <mxPoint x="1341" y="630"/>
+                            <mxPoint x="1520" y="630"/>
+                            <mxPoint x="1520" y="750"/>
                         </Array>
                         <mxPoint as="offset"/>
                     </mxGeometry>
@@ -228,10 +232,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="t9" value="span_metrics&#xa;(remote_write, RED)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#82b366;fontColor=#436b2f;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" edge="1" parent="1" source="otelcol" target="prom">
+                <mxCell id="t9" value="span_metrics&#xa;(remote_write, RED)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#7a2e2e;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="otelcol" target="prom" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="t8" value="searches Jaeger UI&#xa;by order.id" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="devops" target="jaeger" edge="1">
+                <mxCell id="t8" value="searches Jaeger UI" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#b85450;fontColor=#b85450;fontSize=11;endArrow=classic;endFill=1;strokeWidth=2;" parent="1" source="devops" target="jaeger" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="2260" y="1540"/>
@@ -239,7 +243,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="legend1" value="&lt;b&gt;Легенда&lt;/b&gt;&lt;br&gt;&lt;b&gt;Цвета блоков:&lt;/b&gt; &lt;font color=&quot;#23A2D9&quot;&gt;■&lt;/font&gt; синие — существующие контейнеры системы ;&amp;nbsp; &lt;font color=&quot;#b85450&quot;&gt;■&lt;/font&gt; красные — новые компоненты и связи трейсинга ;&amp;nbsp; &lt;font color=&quot;#82b366&quot;&gt;■&lt;/font&gt; зелёный Prometheus — переиспользуется .&lt;br&gt;&lt;b&gt;Линии:&lt;/b&gt; сплошная стрелка — вызов / поток данных; красный пунктир — пропагация trace-контекста (traceparent, W3C); пунктирные рамки — границы систем.&lt;br&gt;&lt;b&gt;Поток трейсинга:&lt;/b&gt; 3 бэкенда (Shop / CRM / MES API) → OTLP в OTel Collector → PII-redaction, span_metrics в Prometheus (RED) + tail-sampling в Jaeger. traceparent идёт во ВСЕХ HTTP-вызовах и сообщениях RabbitMQ (пунктиром показан пример Shop API → RabbitMQ). Фронтенды (Vue/React) — вне scope.&lt;br&gt;&lt;b&gt;Персоны:&lt;/b&gt; тёмно-синие — внутренние сотрудники (Operator, Seller); фиолетовые — внешние пользователи (Customer, API user)." style="text;html=1;align=left;verticalAlign=middle;fillColor=#f9f9f9;strokeColor=#999999;fontColor=#333333;fontSize=11;spacing=8;" parent="1" vertex="1">
+                <mxCell id="legend1" value="&lt;b&gt;Легенда&lt;/b&gt;&lt;br&gt;&lt;b&gt;Цвета блоков:&lt;/b&gt; &lt;font color=&quot;#23A2D9&quot;&gt;■&lt;/font&gt; синие — существующие контейнеры системы ;&amp;nbsp; &lt;font color=&quot;#b85450&quot;&gt;■&lt;/font&gt; красные — новые компоненты и связи трейсинга ;&amp;nbsp; &lt;font color=&quot;#8C8C8C&quot;&gt;■&lt;/font&gt; серый Prometheus — переиспользуется из стека мониторинга .&lt;br&gt;&lt;b&gt;Линии:&lt;/b&gt; сплошная стрелка — вызов / поток данных; красный пунктир — пропагация trace-контекста (traceparent, W3C); пунктирные рамки — границы систем.&lt;br&gt;&lt;b&gt;Поток трейсинга:&lt;/b&gt; 3 бэкенда (Shop / CRM / MES API) → OTLP в OTel Collector → PII-redaction, span_metrics в Prometheus (RED) + tail-sampling в Jaeger. traceparent идёт во ВСЕХ HTTP-вызовах и сообщениях RabbitMQ (пунктиром показан пример CRM API → RabbitMQ). Фронтенды (Vue/React) — вне scope.&lt;br&gt;&lt;b&gt;Персоны:&lt;/b&gt; тёмно-синие — внутренние сотрудники (Operator, Seller); фиолетовые — внешние пользователи (Customer, API user)." style="text;html=1;align=left;verticalAlign=middle;fillColor=#f9f9f9;strokeColor=#999999;fontColor=#333333;fontSize=11;spacing=8;" parent="1" vertex="1">
                     <mxGeometry x="500" y="1390" width="1690" height="130" as="geometry"/>
                 </mxCell>
             </root>
