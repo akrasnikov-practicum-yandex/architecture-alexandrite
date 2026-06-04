@@ -39,13 +39,17 @@ sequenceDiagram
         Customer->>Shop: Нажимает «Оформить заказ»
         Shop->>ShopAPI: POST /orders/{id}/submit
         ShopAPI->>ShopDB: UPDATE order (status=SUBMITTED)
-        ShopAPI->>MQ: Publish → order.submitted {order_id, file_url}
         ShopAPI-->>Shop: SUBMITTED ✓
         Shop-->>Customer: Заказ передан в производство ✓
     end
 
     rect rgb(255, 245, 230)
-        Note over MQ,MesDB: ⚙️ Фаза 2 — Расчёт цены [MES API]
+        Note over ShopDB,CrmAPI: ⚙️ Фаза 2 — Передача в очередь и расчёт цены [CRM API → MES API]
+
+        Note over ShopAPI,CrmAPI: Shop API не подключён к очереди (см. C4-модель).<br/>Мост к RabbitMQ — CRM API: он делит Shop DB с Shop API<br/>и забирает новые заказы в статусе SUBMITTED.
+        CrmAPI->>ShopDB: SELECT новые заказы (status=SUBMITTED)
+        ShopDB-->>CrmAPI: order {order_id, file_url}
+        CrmAPI->>MQ: Publish → order.submitted {order_id, file_url}
 
         MQ-->>MesAPI: Consume order.submitted
         MesAPI->>S3: GET 3D file (file_url)
